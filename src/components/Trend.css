@@ -1,0 +1,45 @@
+.image-element{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 10%;
+    margin-bottom: 3px;
+}
+
+.image-element img{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.image-element .image-wrapper{
+    position: relative;
+}
+
+.image-element .check-icon{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #00bd09;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.show-check .check-icon{
+    opacity: 1;
+}
+
+.button-wrapper{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100;
+}
+
+.button-wrapper button{
+    cursor: pointer;
+}
+

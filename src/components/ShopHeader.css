@@ -1,0 +1,32 @@
+.shop-header-container{
+    text-align: center;
+}
+
+.shop-menu{
+    margin-top: 10px;
+}
+
+.shop-menu ul{
+    list-style: none;
+    clear: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+}
+
+.shop-menu ul li {
+    display: list-item;
+    float: left;
+    position: relative;
+    width: auto;
+    margin: 0 20px 0 0;
+    list-style: none;
+}
+
+.shop-menu ul li a{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+
+}
