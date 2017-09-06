@@ -4,8 +4,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import Recommendation from '../components/Recommendation';
 
 const RecomContainer = ({ userInfo }) => {
+    return (
+        <div>
+            <Recommendation />
+        </div>
+    )
 
 }
 

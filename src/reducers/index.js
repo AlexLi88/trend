@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { routerReducer } from 'react-router-redux'
 import {
     REQUEST_USERINFO,
     RECEIVE_USERINFO,
@@ -32,7 +33,8 @@ function user(
 
 
 const rootReducer = combineReducers({
-    user
+    user,
+    routing: routerReducer
 })
 
 export default rootReducer

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './ShopHeader.css'
+import { Link } from 'react-router-dom'
 import shopLogo from './aritzia_logo_2012.png'
 
 export default class ShopHeader extends Component{
@@ -26,6 +27,12 @@ export default class ShopHeader extends Component{
                         </li>
                         <li>
                             <a href="http://www.aritzia.com.en/accessories">Accessories</a>
+                        </li>
+                        <li>
+                            <Link to="/">Trends</Link>
+                        </li>
+                        <li>
+                            <Link to="/recom">Recommendations</Link>
                         </li>
                     </ul>
                 </div>

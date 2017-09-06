@@ -2,6 +2,8 @@ import axios from 'axios';
 
 class DataService{
     constructor(){
+        this.CLIEND_ID = 'aritzia';
+        this.CLIENT_SECRET = 'DYtOeaKLfTkwQbihXIVw5V2lTNd6eZEYv9OEjefbsgLI1A8lxwpxt4gcZTnpnKdS';
         this.API_SERVER = 'https://api.scopemedia.com';
     }
 
@@ -78,8 +80,8 @@ class DataService{
             headers:{
                 "Content-Type": "application/json",
                 "Authorization": token,
-                "Client-id": 'aritzia',
-                "Client-secret": 'DYtOeaKLfTkwQbihXIVw5V2lTNd6eZEYv9OEjefbsgLI1A8lxwpxt4gcZTnpnKdS'
+                "Client-id": this.CLIEND_ID,
+                "Client-secret": this.CLIENT_SECRET
             },
             data:{
                 name: name,
@@ -97,8 +99,22 @@ class DataService{
             headers:{
                 "Content-Type": "application/json",
                 "Authorization": token,
-                "Client-id": 'aritzia',
-                "Client-secret": 'DYtOeaKLfTkwQbihXIVw5V2lTNd6eZEYv9OEjefbsgLI1A8lxwpxt4gcZTnpnKdS'
+                "Client-id": this.CLIEND_ID,
+                "Client-secret": this.CLIENT_SECRET
+            }
+        })
+    }
+
+    getRecommendation(id){
+        let token = `Bearer ${window.localStorage.getItem('__scope_token')}`;
+        return axios({
+            method: 'GET',
+            url: `${this.API_SERVER}/trending/v2/recommendations/${id}`,
+            headers:{
+                "Content-Type": "application/json",
+                "Authorization": token,
+                "Client-id": this.CLIEND_ID,
+                "Client-secret": this.CLIENT_SECRET
             }
         })
     }

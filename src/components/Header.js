@@ -25,7 +25,7 @@ export default class Header extends Component {
 
     render(){
         let authPart;
-        if(Object.keys(this.props.userInfo.user).length === 0){
+        if(Object.keys(this.props.userInfo).length === 0){
             authPart =
                 <div className="login-wrapper item right">
                     <input type="text"

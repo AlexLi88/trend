@@ -7,15 +7,9 @@ import { connect } from 'react-redux'
 import Shop from '../components/Shop'
 
 const ShopContainer = ({userInfo}) => {
-    let mainPart
-    if(Object.keys(userInfo.user).length === 0){
-        mainPart = <h1>Please login first</h1>
-    }else{
-        mainPart = <Shop />
-    }
     return(
         <div className="shop-container">
-            {mainPart}
+            <Shop />
         </div>
     )
 }
@@ -25,7 +19,7 @@ ShopContainer.propTypes = {
 }
 
 const mapStateToProps = state => {
-    return { userInfo: state }
+    return { userInfo: state.user }
 }
 
 export default connect(mapStateToProps)(ShopContainer)
