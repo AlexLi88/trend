@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './HeaderContainer'
-import MainRoutes from "../Router/MainRoutes";
+import MainRoutes from "../router/MainRoutes";
 
 class App extends Component {
   render() {
