@@ -17,7 +17,7 @@ export default class ShopHeader extends Component{
                 <div className="shop-menu">
                     <ul>
                         <li>
-                            <a href="http://www.aritzia.com/en/new">New</a>
+                            <Link to="/demos/aritzia/new">New</Link>
                         </li>
                         <li>
                             <a href="http://www.aritzia.com/en/clothing">Clothing</a>
@@ -28,11 +28,11 @@ export default class ShopHeader extends Component{
                         <li>
                             <a href="http://www.aritzia.com.en/accessories">Accessories</a>
                         </li>
+                        {/*<li>*/}
+                            {/*<Link to="/trend">Trends</Link>*/}
+                        {/*</li>*/}
                         <li>
-                            <Link to="/">Trends</Link>
-                        </li>
-                        <li>
-                            <Link to="/recom">Recommendations</Link>
+                            <Link to="/demos/aritzia/recom">Recommendations</Link>
                         </li>
                     </ul>
                 </div>

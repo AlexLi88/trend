@@ -2,6 +2,7 @@
   "name": "trend-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/demos/aritzia",
   "dependencies": {
     "axios": "^0.16.2",
     "nock": "^9.0.14",

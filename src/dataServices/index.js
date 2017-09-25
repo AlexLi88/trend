@@ -64,7 +64,7 @@ class DataService{
         let token = `Bearer ${window.localStorage.getItem('__scope_token')}`;
         return axios({
             method: 'GET',
-            url: `${this.API_SERVER}/trending/v2/query?queryTime=${date}&channel=${city}`,
+            url: `${this.API_SERVER}/trending/v2/trendings/10/trends`,
             headers:{
                 "Content-Type": "application/json",
                 "Authorization": token
@@ -115,6 +115,24 @@ class DataService{
                 "Authorization": token,
                 "Client-id": this.CLIEND_ID,
                 "Client-secret": this.CLIENT_SECRET
+            }
+        })
+    }
+
+    searchSimilar(url, page, size){
+        return axios({
+            method: 'POST',
+            url: `${this.API_SERVER}/search/v2/similar`,
+            headers:{
+                "Content-Type": "application/json",
+                "Client-Id": 'demo',
+                "Client-Secret": 'demotestsecret'
+            },
+            data:{
+                mediaUrl: url,
+                modelId: 'fashion',
+                page: page || 0,
+                size: size || 12
             }
         })
     }
